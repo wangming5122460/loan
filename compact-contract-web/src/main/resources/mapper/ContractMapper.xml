@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.easyloan.contract.mapper.ContractMapper">
+
+    <resultMap id="contractInfoMap" type="com.easyloan.bean.NplmLoanContract" autoMapping="true">
+        <result property="id" column="id"></result>
+        <collection property="nplmContractAttributeList" ofType="com.easyloan.bean.NplmContractAttribute" autoMapping="true">
+            <result property="id" column="contractInfo"></result>
+        </collection>
+        <collection property="nplmBorrowerInfoList" ofType="com.easyloan.bean.NplmBorrowerInfo" autoMapping="true">
+            <result property="id" column="borroweInfoId"></result>
+        </collection>
+    </resultMap>
+    <select id="getLoanInfos" resultMap="contractInfoMap">
+        SELECT
+        b.`id` AS borroweInfoId,
+        c.`id` AS contractInfo,
+        b.`CLIENT_NAME`,
+        b.`IDENTITY_TYPE`,
+        b.`IDENTITY_NUM`,
+        b.`CLIENT_AREA`,
+        l.`LOAN_CONTRACT_NUM`,
+        l.`CONTRACT_TYPE`,
+        l.`LOAN_INSTALMENTS`,
+        l.`START_DATE`,
+        l.`END_DATE`,
+        l.`LOAN_AMOUNT`,
+        l.`REPAY_ACCOUNT_BANK_NAME`,
+        l.`REPAY_ACCOUNT`,
+        l.`PRE_FEE`,
+        l.`LOAN_TYPE`,
+        l.`PUT_AMOUNT`,
+        c.`LOAN_TYPE`,
+        c.`business_type`,
+        c.`TRUST_COMPANY`,
+        c.`TRUST_PRODUCT`,
+        c.`TRUST_PLAN`,
+        c.`dept_name`,
+        c.`is_expedited`,
+        c.`sign_type`,
+        c.`sign_date`,
+        c.`CHANGE_TYPE`,
+        c.`CHANGE_AMOUNT`,
+        c.`is_recycle_load`,
+        c.`recycle_loan_cnt`,
+        c.`settle_date`,
+        c.`habit_time`
+        FROM nplm_borrower_info AS b INNER JOIN nplm_loan_contract l
+        ON b.`ECIF_ID` = l.`ECIF_ID` INNER JOIN nplm_contract_attribute AS c
+        ON c.`LOAN_CONTRACT_NUM` = l.`LOAN_CONTRACT_NUM`
+        <where>
+            <if test="loanContractNum != null and ''!=loanContractNum">
+                l.LOAN_CONTRACT_NUM=#{loanContractNum}
+            </if>
+      </where>
+        limit #{pageNumber},#{pageSize}
+    </select>
+
+    <select id="selectTotalCount" resultType="int">
+        SELECT
+        COUNT(*)
+        FROM nplm_borrower_info AS b INNER JOIN nplm_loan_contract l
+        ON b.`ECIF_ID` = l.`ECIF_ID` INNER JOIN nplm_contract_attribute AS c
+        ON c.`LOAN_CONTRACT_NUM` = l.`LOAN_CONTRACT_NUM`
+    </select>
+
+
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="compact-bean" />
+        <module name="compact-commen-util" />
+        <module name="compact-contract-web" />
+        <module name="compact-interface" />
+        <module name="compact-service-util" />
+        <module name="compact-web-util" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aa" target="1.5" />
+      <module name="compact-bean" target="1.8" />
+      <module name="compact-commen-util" target="1.8" />
+      <module name="compact-contract-web" target="1.8" />
+      <module name="compact-interface" target="1.8" />
+      <module name="compact-parent" target="1.8" />
+      <module name="compact-service-util" target="1.8" />
+      <module name="compact-web-util" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/compact-bean/compact-bean.iml" filepath="$PROJECT_DIR$/compact-bean/compact-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compact-commen-util/compact-commen-util.iml" filepath="$PROJECT_DIR$/compact-commen-util/compact-commen-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compact-contract-web/compact-contract-web.iml" filepath="$PROJECT_DIR$/compact-contract-web/compact-contract-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compact-interface/compact-interface.iml" filepath="$PROJECT_DIR$/compact-interface/compact-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compact-parent/compact-parent.iml" filepath="$PROJECT_DIR$/compact-parent/compact-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compact-service-util/compact-service-util.iml" filepath="$PROJECT_DIR$/compact-service-util/compact-service-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compact-web-util/compact-web-util.iml" filepath="$PROJECT_DIR$/compact-web-util/compact-web-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/loanCombat.iml" filepath="$PROJECT_DIR$/.idea/loanCombat.iml" />
+    </modules>
+  </component>
+</project>

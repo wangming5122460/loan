@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/compact-bean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/compact-commen-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/compact-contract-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/compact-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/compact-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/compact-service-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/compact-web-util" charset="UTF-8" />
+  </component>
+</project>
